@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,6 +29,11 @@ class HomeController extends Controller
         $email = $user->email;
         $id = $user->id;
 
-        return view('home', ['name' => $name, 'email' => $email, 'id' => $id]);
+        $tasks = User::find($id)->tasks();
+
+        $done_tasks = User::find($id)->tasks()->where('flag', 'is_done')->get();
+
+
+        return view('home', ['name' => $name, 'email' => $email, 'id' => $id, 'tasks' => $tasks, 'done_tasks' => $done_tasks]);
     }
 }

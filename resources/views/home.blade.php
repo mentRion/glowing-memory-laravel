@@ -10,7 +10,9 @@
                 <div class="card-body">
                     Total Tasks
                     <hr>
-                    <p class="h1">3</p>
+                    <p class="h1">
+                        {{ $tasks->count() }}
+                    </p>
                     <hr>
                     
                 </div>
@@ -25,7 +27,9 @@
 
                      Total Tasks
                     <hr>
-                    <p class="h1">2</p>
+                    <p class="h1">
+                        {{ $done_tasks->count() }}
+                    </p>
                     <hr>
 
 

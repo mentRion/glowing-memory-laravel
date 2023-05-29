@@ -71,13 +71,11 @@
 
                         <li class="nav-item">
 
-                                    <a href="" class="btn btn-light m-1">❌</a>
-                                    <a href="" class="btn btn-light m-1">✔️</a>
-                                    <a href="{{ route('tasks.index') }}" class="btn btn-light m-1">📑</a>                                    
-                                </li>
+                            <a href="{{ route('home') }}" class="btn btn-light m-1">🏚️</a>
+                            <a href="{{ route('tasks.index') }}" class="btn btn-light m-1">📑</a>                                    
+                        </li>
                             
                             <li class="nav-item dropdown">
-
 
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
